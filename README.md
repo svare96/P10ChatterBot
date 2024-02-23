@@ -9,7 +9,7 @@ Then you need to create a new virtual environment.
 
 Type the following command in your root folder, and make sure you create the environment in the correct Python version (Here, v3.8):
 ```
-python3.8 -m venv env
+py -3.8 -m venv env
 ```
 
 Next, you have to activate your new virtual environment.
