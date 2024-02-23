@@ -1,15 +1,17 @@
 from chatterbot import ChatBot
 
 chatbot = ChatBot(
-    'Mr. Cool Ice',
+    'SimpliCT',
     storage_adapter='chatterbot.storage.SQLStorageAdapter',
+    preprocessors=[
+        'chatterbot.preprocessors.clean_whitespace',
+        'chatterbot.preprocessors.unescape_html',
+        'chatterbot.preprocessors.convert_to_ascii',
+        'CustomPreprocessors.ignore_special_characters'
+    ],
     logic_adapters=[
-        {
-            'import_path': 'CustomLogicAdapter.CT_Adapter'
-        },
-        {
-            'import_path': 'chatterbot.logic.BestMatch'
-        }
+        'CustomLogicAdapter.CT_Adapter',
+        'chatterbot.logic.BestMatch'
     ],
     database_uri='sqlite:///database.sqlite3'
 )
