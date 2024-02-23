@@ -7,7 +7,6 @@ trainer.train(
     "./data/english"
 )
 
-# from main import chatbot
 # from chatterbot.trainers import ListTrainer
 
 # trainer = ListTrainer(chatbot)
